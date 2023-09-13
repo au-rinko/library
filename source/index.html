@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooklyn Public Library</title>
+</head>
+<body class="page_body">
+    <header class="header">
+        <a href="#" class="header__logo">
+            <img src="#" alt="Logo" class="header__logo-img">
+        </a>
+
+        <nav class="nav">
+            <button type="button" class="button nav-toggle">
+                <span class="visually-hidden">Open menu</span>
+            </button>
+
+            <ul class="header-menu">
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">About</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Favorites</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Coffee shop</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Contacts</a>
+                </li>
+                <li class="header-menu__item">
+                    <a href="#" class="header-menu__link">Library Card</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="profile">
+            <button type="button" class="button profile-toggle">
+                <span class="visually-hidden">Open profile menu</span>
+            </button>
+            <ul class="profile__list">
+                <li class="profile__items">
+                    <a href="" class="profile__link profile__link--main">Profile</a>
+                </li>
+                <li class="profile__items">
+                    <a href="" class="profile__link profile__link--active">Log In</a>
+                </li>
+                <li class="profile__items">
+                    <a href="" class="profile__link profile__link--active">Register</a>
+                </li>
+                <li class="profile__items">
+                    <a href="" class="profile__link">My profile</a>
+                </li>
+                <li class="profile__items">
+                    <a href="" class="profile__link">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="main">
+        
+        <section class="promo">
+            <h1 class="visually-hidden">Brooklyn Public Library</h1>
+            <p class="promo__text">
+                Welcome to the Brooklyn Library
+            </p>
+        </section>
+
+        <section class="about">
+            <h2 class="title">About</h2>
+            <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+            <div class="about-slider">
+                <ul class="about-slider__list">
+                    <li class="about-slider__item">
+                        <img src="" alt="" class="about-slider__img">
+                    </li>
+                    <li class="about-slider__item">
+                        <img src="" alt="" class="about-slider__img">
+                    </li>
+                    <li class="about-slider__item">
+                        <img src="" alt="" class="about-slider__img">
+                    </li>
+                    <li class="about-slider__item">
+                        <img src="" alt="" class="about-slider__img">
+                    </li>
+                    <li class="about-slider__item">
+                        <img src="" alt="" class="about-slider__img">
+                    </li>
+                </ul>
+
+                <ul class="about-slider__controls">
+                    <li>
+                        <button type="button" class="about-slider__button"></button>
+                    </li>
+                    <li>
+                        <button type="button" class="about-slider__button"></button>
+                    </li>
+                    <li>
+                        <button type="button" class="about-slider__button"></button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="favorites">
+            <h2 class="title">Favorites</h2>
+
+            <form action="#" method="post" class="form">
+                <p class="form__text">Pick favorites of season</p>
+                <fieldset>
+                    <input type="radio" name="season" id="winter" value="winter"><label for="winter">Winter</label>
+                    <input type="radio" name="season" id="spring" value="spring"><label for="spring">Spring</label>
+                    <input type="radio" name="season" id="summer" value="summer"><label for="summer">Summer</label>
+                    <input type="radio" name="season" id="autumn" value="autumn"><label for="autumn">Autumn</label>
+                </fieldset>
+            </form>
+
+            <ul class="favorites__list">
+                <li class="favorites__item">
+                    <div class="favorites__mark">Staff Picks</div>
+                    <h3 class="title favorites__title">The Book Eaters <br>
+                        <span class="title-author">By Sunyi Dean</span>
+                    </h3>
+                    <p class="favorites__description">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+                    <img src="#" alt="The Book Eaters">
+                    <a href="#" class="button favorites__link">Buy</a>
+                </li>
+                <li class="favorites__item">
+                    <div class="favorites__mark">Staff Picks</div>
+                    <h3 class="title favorites__title">Cackle<br>
+                        <span class="title-author">By Rachel Harrison</span>
+                    </h3>
+                    <p class="favorites__description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                    <img src="#" alt="Cackle">
+                    <a href="#" class="button favorites__link">Buy</a>
+                </li>
+                <li class="favorites__item">
+                    <div class="favorites__mark">Staff Picks</div>
+                    <h3 class="title favorites__title">Dante: Poet of the Secular World<br>
+                        <span class="title-author">By Erich Auerbach</span>
+                    </h3>
+                    <p class="favorites__description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                    <img src="#" alt="Dante: Poet of the Secular World">
+                    <a href="#" class="button favorites__link">Buy</a>
+                </li>
+                <li class="favorites__item">
+                    <div class="favorites__mark">Staff Picks</div>
+                    <h3 class="title favorites__title">The Last Queen<br>
+                        <span class="title-author">By Clive Irving</span>
+                    </h3>
+                    <p class="favorites__description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                    <img src="#" alt="The Last Queen">
+                    <a href="#" class="button favorites__link">Buy</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
