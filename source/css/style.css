@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Forum";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Forum-Regular.woff2"), url("/fonts/Forum-Regular.woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Regular.woff2"), url("/fonts/Inter-Regular.woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Inter-Bold.woff2"), url("/fonts/Inter-Bold.woff");
+}
+.page {
+  margin: 0 auto;
+  width: 1440px;
+  background-color: #ffffff;
+}
+
+.page-body {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: #000000;
+  position: relative;
+}

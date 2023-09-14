@@ -1,239 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn Public Library</title>
+
+    <link rel="stylesheet" href="css/style.min.css">
+
 </head>
-<body class="page_body">
-    <header class="header">
-        <a href="#" class="header__logo">
-            <img src="#" alt="Logo" class="header__logo-img">
-        </a>
+<body class="page-body">
+    <div class="page-body__wrapper">
+        <header class="header">
+            <a href="#" class="header__logo">
+                <img src="#" alt="Logo" class="header__logo-img">
+            </a>
 
-        <nav class="nav">
-            <button type="button" class="button nav-toggle">
-                <span class="visually-hidden">Open menu</span>
-            </button>
+            <nav class="nav">
+                <button type="button" class="button nav-toggle">
+                    <span class="visually-hidden">Open menu</span>
+                </button>
 
-            <ul class="header-menu">
-                <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">About</a>
-                </li>
-                <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Favorites</a>
-                </li>
-                <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Coffee shop</a>
-                </li>
-                <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Contacts</a>
-                </li>
-                <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Library Card</a>
-                </li>
-            </ul>
-        </nav>
+                <ul class="header-menu">
+                    <li class="header-menu__item">
+                        <a href="#" class="header-menu__link">About</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#" class="header-menu__link">Favorites</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#" class="header-menu__link">Coffee shop</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#" class="header-menu__link">Contacts</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#" class="header-menu__link">Library Card</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <div class="profile">
-            <button type="button" class="button profile-toggle">
-                <span class="visually-hidden">Open profile menu</span>
-            </button>
-            <ul class="profile__list">
-                <li class="profile__items">
-                    <a href="" class="profile__link profile__link--main">Profile</a>
-                </li>
-                <li class="profile__items">
-                    <a href="" class="profile__link profile__link--active">Log In</a>
-                </li>
-                <li class="profile__items">
-                    <a href="" class="profile__link profile__link--active">Register</a>
-                </li>
-                <li class="profile__items">
-                    <a href="" class="profile__link">My profile</a>
-                </li>
-                <li class="profile__items">
-                    <a href="" class="profile__link">Log Out</a>
-                </li>
-            </ul>
+            <div class="profile">
+                <button type="button" class="button profile-toggle">
+                    <span class="visually-hidden">Open profile menu</span>
+                </button>
+                <ul class="profile__list">
+                    <li class="profile__items">
+                        <a href="" class="profile__link profile__link--main">Profile</a>
+                    </li>
+                    <li class="profile__items">
+                        <a href="" class="profile__link profile__link--active">Log In</a>
+                    </li>
+                    <li class="profile__items">
+                        <a href="" class="profile__link profile__link--active">Register</a>
+                    </li>
+                    <li class="profile__items">
+                        <a href="" class="profile__link">My profile</a>
+                    </li>
+                    <li class="profile__items">
+                        <a href="" class="profile__link">Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main">
+            
+            <section class="promo">
+                <h1 class="visually-hidden">Brooklyn Public Library</h1>
+                <p class="promo__text">
+                    Welcome to the Brooklyn Library
+                </p>
+            </section>
+
+            <section class="about">
+                <h2 class="title">About</h2>
+                <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                <div class="about-slider">
+                    <ul class="about-slider__list">
+                        <li class="about-slider__item">
+                            <img src="" alt="" class="about-slider__img">
+                        </li>
+                        <li class="about-slider__item">
+                            <img src="" alt="" class="about-slider__img">
+                        </li>
+                        <li class="about-slider__item">
+                            <img src="" alt="" class="about-slider__img">
+                        </li>
+                        <li class="about-slider__item">
+                            <img src="" alt="" class="about-slider__img">
+                        </li>
+                        <li class="about-slider__item">
+                            <img src="" alt="" class="about-slider__img">
+                        </li>
+                    </ul>
+
+                    <ul class="about-slider__controls">
+                        <li>
+                            <button type="button" class="about-slider__button"></button>
+                        </li>
+                        <li>
+                            <button type="button" class="about-slider__button"></button>
+                        </li>
+                        <li>
+                            <button type="button" class="about-slider__button"></button>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="favorites">
+                <h2 class="title">Favorites</h2>
+
+                <form action="#" method="post" class="form">
+                    <p class="form__text">Pick favorites of season</p>
+                    <fieldset>
+                        <input type="radio" name="season" id="winter" value="winter"><label for="winter">Winter</label>
+                        <input type="radio" name="season" id="spring" value="spring"><label for="spring">Spring</label>
+                        <input type="radio" name="season" id="summer" value="summer"><label for="summer">Summer</label>
+                        <input type="radio" name="season" id="autumn" value="autumn"><label for="autumn">Autumn</label>
+                    </fieldset>
+                </form>
+
+                <ul class="favorites__list">
+                    <li class="favorites__item">
+                        <div class="favorites__mark">Staff Picks</div>
+                        <h3 class="title favorites__title">The Book Eaters <br>
+                            <span class="title-author">By Sunyi Dean</span>
+                        </h3>
+                        <p class="favorites__description">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+                        <img src="#" alt="The Book Eaters">
+                        <a href="#" class="button favorites__link">Buy</a>
+                    </li>
+                    <li class="favorites__item">
+                        <div class="favorites__mark">Staff Picks</div>
+                        <h3 class="title favorites__title">Cackle<br>
+                            <span class="title-author">By Rachel Harrison</span>
+                        </h3>
+                        <p class="favorites__description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                        <img src="#" alt="Cackle">
+                        <a href="#" class="button favorites__link">Buy</a>
+                    </li>
+                    <li class="favorites__item">
+                        <div class="favorites__mark">Staff Picks</div>
+                        <h3 class="title favorites__title">Dante: Poet of the Secular World<br>
+                            <span class="title-author">By Erich Auerbach</span>
+                        </h3>
+                        <p class="favorites__description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                        <img src="#" alt="Dante: Poet of the Secular World">
+                        <a href="#" class="button favorites__link">Buy</a>
+                    </li>
+                    <li class="favorites__item">
+                        <div class="favorites__mark">Staff Picks</div>
+                        <h3 class="title favorites__title">The Last Queen<br>
+                            <span class="title-author">By Clive Irving</span>
+                        </h3>
+                        <p class="favorites__description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                        <img src="#" alt="The Last Queen">
+                        <a href="#" class="button favorites__link">Buy</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="coffee-shop">
+                <h2 class="title">Coffee shop</h2>
+                <p class="coffee-shop__text">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
+
+                <div class="coffee-shop__wrapper">
+                    <div class="coffee-shop__menu coffee-shop__menu--left">
+                        <h3 class="coffee-shop__title">Coffee & Tea </h3>
+                        <ul class="coffee-shop__list">
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Cold Brew Coffee</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$3</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">French Press Pot</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$5</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Espresso</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$2</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Cappuccino</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$4</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Hot tea</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$2</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Cold tea</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$2</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="coffee-shop__menu coffee-shop__menu--right">
+                        <h3 class="coffee-shop__title">Desserts & Cakes</h3>
+                        <ul class="coffee-shop__list">
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Forest Gateau</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$16</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Blue Moon</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$16</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Truffle Cake</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$15</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Chocolate Cake</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$18</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Poet’s Dream Cake</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$16</span>
+                            </li>
+                            <li class="coffee-shop__item">
+                                <span class="coffee-shop__name">Pineapple Cake</span>
+                                <div class="coffee-shop__line"></div>
+                                <span class="coffee-shop__price">$14</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact">
+                <h2 class="title">Our Contacts</h2>
+
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <div class="contact__info-strong">For all Library inquiries:</div>
+                        <p class="contact_info-text">Please call <a tel="+6177302370">(617) 730-2370</a></p>
+                        <p class="contact_info-text">For TTY service, please call <a tel="+6177302370">(617) 730-2370</a></p>
+                        <p class="contact_info-text">Putterham Library: <a tel="+6177302370">(617) 730-2370</a></p>
+                        <div class="contact__info-strong">Senior Staff</div>
+                        <p class="contact_info-text">Library Director: <strong>Amanda Hirst</strong></p>
+                    </div>
+                    <div class="contact__map"></div>
+                </div>
+            </section>
+
+            <section class="library-cards">
+                <h2 class="title">Digital Library Cards</h2>
+
+                <div class="library-cards__wrapper">
+                    <div class="library-cards__check">
+                        <h3 class="library-cards__title">Find your Library card</h3>
+                        <form action="#" method="post" class="library-cards__form">
+                            <div class="library-cards__form-wrapper">
+                                <p class="library-cards__title">Brooklyn Public Library</p>
+                                <input type="text" name="reader-name" class="library-cards__input" placeholder="Reader's name">
+                                <input type="number" name="card-number" class="library-cards__input" placeholder="Card number">
+                            </div>
+                            <button type="button" class="button library-cards__button">Check the card</button>
+                        </form>
+                    </div>
+                    <div class="library-cards__get">
+                        <div class="library-cards__header">Get a reader card</div>
+                        <p class="library-cards__text">You will be able to see a reader card after logging into account or you can register a new account</p>
+                        <button type="button" class="button library-cards__button--signup">Sign Up</button>
+                        <button type="button" class="button library-cards__button--login">Log In</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__contacts">
+                <address>286 Cadman Plaza, New York, NY 11238, United States</address>
+                <div class="social-media">
+                    <a href="#" class="social-media__link">
+                        <span class="visually-hidden">Twitter</span>
+                    </a>
+                    <a href="#" class="social-media__link">
+                        <span class="visually-hidden">Instagram</span>
+                    </a>
+                    <a href="#" class="social-media__link">
+                        <span class="visually-hidden">Facebook</span>
+                    </a>
+                </div>
+            </div>
+            <div class="timetable">
+                <p>Mon - Fri<br>
+                    08:00 am - 07:00 pm
+                </p>
+                <p>Sat - Sun<br>
+                    10:00 am - 06:00 pm
+                </p>
+            </div>
+            <div>
+                <div>2023</div>
+                <a href="#">The Rolling Scopes School</a>
+                <div>Username</div>
+            </div>
+        </footer>
+    </div>
+
+    <section class="popup login-popup">
+        <h2 class="title">Login</h2>
+        <form action="#" method="post" class="popup-form">
+            <label for="reader-email">E-mail or readers card
+                <input type="text" name="reader-email" id="reader-email" class="popup-form__input">
+            </label>
+            <label for="reader-pass">Password
+                <input type="password" name="reader-pass" id="reader-pass" class="popup-form__input">
+            </label>
+            <button type="submit" class="button">Log In</button>
+        </form>
+        <div class="popup__text">Don’t have an account? <a href="#">Register</a></div>
+        <button type="button" class="close"></button>
+    </section>
+
+    <section class="popup register-popup">
+        <h2 class="title">Register</h2>
+        <form action="#" method="post" class="popup-form">
+            <label for="name">First name
+                <input type="text" name="name" id="name" class="popup-form__input">
+            </label>
+            <label for="last-name">Last name
+                <input type="text" name="last-name" id="last-name" class="popup-form__input">
+            </label>
+            <label for="email">E-mail
+                <input type="email" name="email" id="email" class="popup-form__input">
+            </label>
+            <label for="password">Password
+                <input type="password" name="password" id="password" class="popup-form__input">
+            </label>
+            <button type="button" class="button">Sign Up</button>
+        </form>
+        <div class="popup__text">Already have an account? <a href="#">Login</a></div>
+        <button type="button" class="close"></button>
+    </section>
+
+    <section class="popup profile-popup">
+        <div class="popup__wrapper">
+            <div class="popup__left">
+                <img src="#" alt="Profile photo">
+                <div class="profile__name">John Doe</div>
+            </div>
+            <div class="profile__info">
+                <h2 class="title">My profile</h2>
+                <ul class="profile__icons">
+                    <li class="profile__icons-item">
+                        <div class="profile__icons-title">visits</div>
+                        <img src="#" alt="">
+                        <div>23</div>
+                    </li>
+                    <li>
+                        <div class="profile__icons-title">bonuses</div>
+                        <img src="#" alt="">
+                        <div>1240</div>
+                    </li>
+                    <li>
+                        <div class="profile__icons-title">Books</div>
+                        <img src="#" alt="">
+                        <div>2</div>
+                    </li>
+                </ul>
+                <div class="profile__books">
+                    <h3 class="profile__books-title">Rented books</h3>
+                    <ul class="profile__books-list">
+                        <li>The Last Queen, Clive Irving</li>
+                        <li>Dominicana, Angie Cruz</li>
+                    </ul>
+                </div>
+                <div class="profile__card">Card number <a href="#">F00234030</a></div>
+            </div>
         </div>
-    </header>
+        <button type="button" class="close"></button>
+    </section>
 
-    <main class="main">
-        
-        <section class="promo">
-            <h1 class="visually-hidden">Brooklyn Public Library</h1>
-            <p class="promo__text">
-                Welcome to the Brooklyn Library
-            </p>
-        </section>
-
-        <section class="about">
-            <h2 class="title">About</h2>
-            <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
-            <div class="about-slider">
-                <ul class="about-slider__list">
-                    <li class="about-slider__item">
-                        <img src="" alt="" class="about-slider__img">
-                    </li>
-                    <li class="about-slider__item">
-                        <img src="" alt="" class="about-slider__img">
-                    </li>
-                    <li class="about-slider__item">
-                        <img src="" alt="" class="about-slider__img">
-                    </li>
-                    <li class="about-slider__item">
-                        <img src="" alt="" class="about-slider__img">
-                    </li>
-                    <li class="about-slider__item">
-                        <img src="" alt="" class="about-slider__img">
-                    </li>
-                </ul>
-
-                <ul class="about-slider__controls">
-                    <li>
-                        <button type="button" class="about-slider__button"></button>
-                    </li>
-                    <li>
-                        <button type="button" class="about-slider__button"></button>
-                    </li>
-                    <li>
-                        <button type="button" class="about-slider__button"></button>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="favorites">
-            <h2 class="title">Favorites</h2>
-
-            <form action="#" method="post" class="form">
-                <p class="form__text">Pick favorites of season</p>
-                <fieldset>
-                    <input type="radio" name="season" id="winter" value="winter"><label for="winter">Winter</label>
-                    <input type="radio" name="season" id="spring" value="spring"><label for="spring">Spring</label>
-                    <input type="radio" name="season" id="summer" value="summer"><label for="summer">Summer</label>
-                    <input type="radio" name="season" id="autumn" value="autumn"><label for="autumn">Autumn</label>
-                </fieldset>
-            </form>
-
-            <ul class="favorites__list">
-                <li class="favorites__item">
-                    <div class="favorites__mark">Staff Picks</div>
-                    <h3 class="title favorites__title">The Book Eaters <br>
-                        <span class="title-author">By Sunyi Dean</span>
-                    </h3>
-                    <p class="favorites__description">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
-                    <img src="#" alt="The Book Eaters">
-                    <a href="#" class="button favorites__link">Buy</a>
-                </li>
-                <li class="favorites__item">
-                    <div class="favorites__mark">Staff Picks</div>
-                    <h3 class="title favorites__title">Cackle<br>
-                        <span class="title-author">By Rachel Harrison</span>
-                    </h3>
-                    <p class="favorites__description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
-                    <img src="#" alt="Cackle">
-                    <a href="#" class="button favorites__link">Buy</a>
-                </li>
-                <li class="favorites__item">
-                    <div class="favorites__mark">Staff Picks</div>
-                    <h3 class="title favorites__title">Dante: Poet of the Secular World<br>
-                        <span class="title-author">By Erich Auerbach</span>
-                    </h3>
-                    <p class="favorites__description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
-                    <img src="#" alt="Dante: Poet of the Secular World">
-                    <a href="#" class="button favorites__link">Buy</a>
-                </li>
-                <li class="favorites__item">
-                    <div class="favorites__mark">Staff Picks</div>
-                    <h3 class="title favorites__title">The Last Queen<br>
-                        <span class="title-author">By Clive Irving</span>
-                    </h3>
-                    <p class="favorites__description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
-                    <img src="#" alt="The Last Queen">
-                    <a href="#" class="button favorites__link">Buy</a>
-                </li>
-            </ul>
-        </section>
-
-        <section class="coffee-shop">
-            <h2 class="title">Coffee shop</h2>
-            <p class="coffee-shop__text">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
-
-            <div class="coffee-shop__wrapper">
-                <div class="coffee-shop__menu coffee-shop__menu--left">
-                    <h3 class="coffee-shop__title">Coffee & Tea </h3>
-                    <ul class="coffee-shop__list">
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Cold Brew Coffee</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$3</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">French Press Pot</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$5</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Espresso</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$2</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Cappuccino</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$4</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Hot tea</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$2</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Cold tea</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$2</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="coffee-shop__menu coffee-shop__menu--right">
-                    <h3 class="coffee-shop__title">Desserts & Cakes</h3>
-                    <ul class="coffee-shop__list">
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Forest Gateau</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$16</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Blue Moon</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$16</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Truffle Cake</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$15</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Chocolate Cake</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$18</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Poet’s Dream Cake</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$16</span>
-                        </li>
-                        <li class="coffee-shop__item">
-                            <span class="coffee-shop__name">Pineapple Cake</span>
-                            <div class="coffee-shop__line"></div>
-                            <span class="coffee-shop__price">$14</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
 </body>
