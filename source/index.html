@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn Public Library</title>
 
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
 
 </head>
@@ -12,10 +13,10 @@
     <div class="page-body__wrapper">
         <header class="header">
             <a href="#" class="header__logo">
-                <img src="#" alt="Logo" class="header__logo-img">
+                <img src="img/BrooklynPublicLibrary.svg" width="292" height="27" alt="Logo" class="header__logo-img">
             </a>
 
-            <nav class="nav">
+            <nav class="header__nav">
                 <button type="button" class="button nav-toggle">
                     <span class="visually-hidden">Open menu</span>
                 </button>
@@ -39,25 +40,28 @@
                 </ul>
             </nav>
 
-            <div class="profile">
-                <button type="button" class="button profile-toggle">
+            <div class="header__profile">
+                <a href class="header__profile-toggle">
+                    <svg width="28" height="28" role="img" aria-hidden="true" aria-label="Profile icon" >
+                        <use xlink:href="img/sprite.svg#profile-icon"></use>
+                    </svg>
                     <span class="visually-hidden">Open profile menu</span>
-                </button>
-                <ul class="profile__list">
+                </a>
+                <ul class="profile__list profile__list--closed">
                     <li class="profile__items">
-                        <a href="" class="profile__link profile__link--main">Profile</a>
+                        <a class="profile__link profile__link--main">Profile</a>
                     </li>
                     <li class="profile__items">
-                        <a href="" class="profile__link profile__link--active">Log In</a>
+                        <a href="#" class="profile__link profile__link--active">Log In</a>
                     </li>
                     <li class="profile__items">
-                        <a href="" class="profile__link profile__link--active">Register</a>
+                        <a href="#" class="profile__link profile__link--active">Register</a>
                     </li>
                     <li class="profile__items">
-                        <a href="" class="profile__link">My profile</a>
+                        <a href="#" class="profile__link profile__link--inactive">My profile</a>
                     </li>
                     <li class="profile__items">
-                        <a href="" class="profile__link">Log Out</a>
+                        <a href="#" class="profile__link profile__link--inactive">Log Out</a>
                     </li>
                 </ul>
             </div>
@@ -68,7 +72,7 @@
             <section class="promo">
                 <h1 class="visually-hidden">Brooklyn Public Library</h1>
                 <p class="promo__text">
-                    Welcome to the Brooklyn Library
+                    Welcome <br>to the Brooklyn <br>Library
                 </p>
             </section>
 
@@ -384,5 +388,7 @@
         </div>
         <button type="button" class="close"></button>
     </section>
+
+    <script src="js/script.js"></script>
 
 </body>

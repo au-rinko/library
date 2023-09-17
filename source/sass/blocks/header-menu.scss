@@ -1,0 +1,16 @@
+.header-menu{
+    @include no-list;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.header-menu__link{
+    color: $basic_white;
+    transition: all 0.5s ease-out;
+
+    &:hover{
+        color: $basic_brown;
+    }
+}

@@ -1,0 +1,53 @@
+.profile__list{
+    @include no-list;
+    padding: 5px 4px 20px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    background: $basic_white;
+    transition: all 0.5s ease-out;
+}
+
+.profile__items{
+    margin-bottom: 10px;
+}
+
+.profile__link{
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    color: $basic_black;
+    transition: all 0.5s ease-out;
+
+    &:hover,
+    &:focus{
+        color: $basic_grey;
+    }
+}
+
+.profile__link--main{
+    font-weight: 700;
+
+    &::before{
+        content: ' ';
+        position: absolute;
+        bottom: -7px;
+        left: 10%;
+        right: 10%;
+        width: 80%;
+        height: 1px;
+        background: $basic_brown;
+    }
+}
+
+.profile__link--inactive,
+.profile__list--closed{
+    display: none;
+
+}
+
+.header__profile:hover .profile__list,
+.header__profile:focus .profile__list{
+    display: block;
+}

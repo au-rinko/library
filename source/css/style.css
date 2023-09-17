@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+.invisible {
+  display: none;
+}
+
 @font-face {
   font-family: "Forum";
   font-weight: 400;
@@ -44,18 +48,161 @@ a {
 }
 .page {
   margin: 0 auto;
-  width: 1440px;
+  min-width: 1440px;
   background-color: #ffffff;
 }
 
 .page-body {
+  margin: 0;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
   color: #000000;
+}
+
+.page-body__wrapper {
+  margin: 0 auto;
+  width: 1440px;
   position: relative;
+}
+
+.header {
+  width: 100%;
+  min-height: 90px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  background: #000000;
+}
+
+.header__logo {
+  margin-right: auto;
+  align-self: flex-end;
+  transition: all 0.5s ease-out;
+}
+.header__logo:hover, .header__logo:focus {
+  transform: scale(1.03);
+}
+
+.header__nav {
+  position: relative;
+  line-height: 30px;
+}
+.header__nav .button {
+  display: none;
+}
+
+.header__profile {
+  position: relative;
+  margin-left: 40px;
+}
+
+.header__profile-toggle {
+  padding: 0;
+}
+.header__profile-toggle svg {
+  fill: #ffffff;
+  transition: all 0.5s ease-out;
+}
+.header__profile-toggle:focus svg, .header__profile-toggle:hover svg {
+  fill: #BB945F;
+}
+
+.header-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.header-menu__link {
+  color: #ffffff;
+  transition: all 0.5s ease-out;
+}
+.header-menu__link:hover {
+  color: #BB945F;
+}
+
+.profile__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 5px 4px 20px;
+  width: 100px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  background: #ffffff;
+  transition: all 0.5s ease-out;
+}
+
+.profile__items {
+  margin-bottom: 10px;
+}
+
+.profile__link {
+  position: relative;
+  font-size: 15px;
+  line-height: 20px;
+  color: #000000;
+  transition: all 0.5s ease-out;
+}
+.profile__link:hover, .profile__link:focus {
+  color: #8E8E8E;
+}
+
+.profile__link--main {
+  font-weight: 700;
+}
+.profile__link--main::before {
+  content: " ";
+  position: absolute;
+  bottom: -7px;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  height: 1px;
+  background: #BB945F;
+}
+
+.profile__link--inactive,
+.profile__list--closed {
+  display: none;
+}
+
+.header__profile:hover .profile__list,
+.header__profile:focus .profile__list {
+  display: block;
+}
+
+.promo {
+  width: 100%;
+  height: 600px;
+  padding-top: 220px;
+  background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 50%), url("../../img/Welcome.jpg") top left/cover no-repeat;
+}
+@media (min-resolution: 2dppx) {
+  .promo {
+    background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 50%), url("../../img/Welcome@2x.jpg") top left/cover no-repeat;
+  }
+}
+
+.promo__text {
+  margin: 0;
+  padding: 35px 40px;
+  width: 600px;
+  text-align: center;
+  background: #0C0C0E;
+  font-family: "Forum", "Times New Roman", serif;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
 }

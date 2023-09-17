@@ -1,0 +1,48 @@
+.header{
+    width: 100%;
+    min-height: 90px;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    background: $basic_black;
+}
+
+.header__logo{
+    // width: 20%;
+    margin-right: auto;
+    align-self: flex-end;
+    transition: all 0.5s ease-out;
+
+    &:hover,
+    &:focus{
+        transform: scale(1.03);
+    }
+}
+
+.header__nav{
+    position: relative;
+    line-height: 30px;
+
+    .button{
+        display: none;
+    }
+}
+
+.header__profile{
+    position: relative;
+    margin-left: 40px;
+}
+
+.header__profile-toggle{
+    padding: 0;
+
+    & svg{
+        fill: $basic_white;
+        transition: all 0.5s ease-out;
+    }
+
+    &:focus svg,
+    &:hover svg{
+        fill: $basic_brown;
+    }
+}
