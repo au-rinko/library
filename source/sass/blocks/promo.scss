@@ -2,10 +2,10 @@
     width: 100%;
     height: 600px;
     padding-top: 220px;
-    background: linear-gradient(180deg, $basic_black1 0%, $basic_black1 0.01%, rgba(18, 18, 21, 0.10) 50%), url("../../img/Welcome.jpg") top left/cover no-repeat;
+    background: linear-gradient(180deg, $basic_black1 0%, $basic_black1 0.01%, rgba(18, 18, 21, 0.10) 50%), url("../../img/Welcome.jpg") top left/cover no-repeat, $basic_black;
 
     @media (min-resolution: 2dppx){
-        background: linear-gradient(180deg, $basic_black1 0%, $basic_black1 0.01%, rgba(18, 18, 21, 0.10) 50%), url("../../img/Welcome@2x.jpg") top left/cover no-repeat;
+        background: linear-gradient(180deg, $basic_black1 0%, $basic_black1 0.01%, rgba(18, 18, 21, 0.10) 50%), url("../../img/Welcome@2x.jpg") top left/cover no-repeat, $basic_black;
     }
 }
 

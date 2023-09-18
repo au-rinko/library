@@ -1,0 +1,18 @@
+.button{
+    outline: none;
+    border: 1px solid $basic_black1;
+    border-radius: 2px;
+    padding: 10px 40px;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $basic_black1;
+    background: $basic_white;
+    transition: all 0.5s ease-out;
+
+    &:focus{
+        background: $basic_brown;
+        border: 1px solid $basic_brown;
+    }
+}

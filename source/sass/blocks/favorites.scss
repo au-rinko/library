@@ -1,0 +1,135 @@
+.favorites{
+    @include section-padding;
+
+    & .title{
+        text-align: center;
+    }
+}
+
+.favorites-form__text{
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.favorites-form__radio{
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    border: none;
+
+    & input{
+        appearance: none;
+        width: 17px;
+        height: 17px;
+        border: 2px solid $basic_black;
+        border-radius: 50%;
+        transition: all 0.5s ease-out;
+
+        &:checked{
+            background: radial-gradient(circle, $basic_black 0%, $basic_black 40%, $basic_white 40%, $basic_white 100%);
+
+            &:hover{
+                background: radial-gradient(circle, $basic_grey 0%, $basic_grey 40%, $basic_white 40%, $basic_white 100%);
+            }
+        }
+
+        &:hover{
+            border: 2px solid $basic_grey;
+        }
+    }
+
+    & label{
+        margin-right: 90px;
+        transition: all 0.5s ease-out;
+
+        & span{
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        &:hover{
+            color: $basic_grey;
+        }
+    }
+}
+
+.favorites__list{
+    @include no-list;
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, 550px);
+    gap: 40px 260px;
+}
+
+.favorites__item{
+    position: relative;
+    padding: 15px 170px 15px 20px;
+    border: 1px solid $basic_black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.favorites__mark{
+    position: relative;
+    margin-bottom: 20px;
+    font-family: "Forum";
+    font-size: 20px;
+    line-height: 40px; 
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+    &:after{
+        content: ' ';
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width: 60px;
+        height: 1px;
+        background: $basic_brown;
+    }
+}
+
+.favorites__title{
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.title-author{
+    text-transform: none;
+}
+
+.favorites__description{
+    margin: 0;
+    margin-bottom: 15px;
+    font-family: "Inter";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px; 
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.favorites__img{
+    position: absolute;
+    bottom: -6px;
+    left: 390px;
+    width: 100%;
+}
+
+.favorites__link{
+    display: inline-block;
+    padding: 9px 27px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}

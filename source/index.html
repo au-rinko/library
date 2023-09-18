@@ -81,26 +81,36 @@
                 <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 <div class="about-slider">
                     <ul class="about-slider__list">
-                        <li class="about-slider__item">
-                            <img src="" alt="" class="about-slider__img">
+                        <li class="about-slider__item about-slider__item--active">
+                            <picture class="about-slider__img"> 
+                                <img src="img/slide1.jpg" width="450" height="560" srcset="img/slide1@2x.jpg 2x" alt="Girl is searching for a book" class="about-slider__img">
+                            </picture>
                         </li>
                         <li class="about-slider__item">
-                            <img src="" alt="" class="about-slider__img">
+                            <picture class="about-slider__img"> 
+                                <img src="img/slide2.jpg" width="450" height="560" srcset="img/slide2@2x.jpg 2x" alt="Sculpures" class="about-slider__img">
+                            </picture>
                         </li>
                         <li class="about-slider__item">
-                            <img src="" alt="" class="about-slider__img">
+                            <picture class="about-slider__img"> 
+                                <img src="img/slide3.jpg" width="450" height="560" srcset="img/slide3@2x.jpg 2x" alt="Stends with books" class="about-slider__img">
+                            </picture>
                         </li>
                         <li class="about-slider__item">
-                            <img src="" alt="" class="about-slider__img">
+                            <picture class="about-slider__img"> 
+                                <img src="img/slide4.jpg" width="450" height="560" srcset="img/slide4@2x.jpg 2x" alt="Stends with books" class="about-slider__img">
+                            </picture>
                         </li>
                         <li class="about-slider__item">
-                            <img src="" alt="" class="about-slider__img">
+                            <picture class="about-slider__img"> 
+                                <img src="img/slide5.jpg" width="450" height="560" srcset="img/slide5@2x.jpg 2x" alt="Building" class="about-slider__img">
+                            </picture>
                         </li>
                     </ul>
 
                     <ul class="about-slider__controls">
                         <li>
-                            <button type="button" class="about-slider__button"></button>
+                            <button type="button" class="about-slider__button about-slider__button--active"></button>
                         </li>
                         <li>
                             <button type="button" class="about-slider__button"></button>
@@ -116,50 +126,74 @@
                 <h2 class="title">Favorites</h2>
 
                 <form action="#" method="post" class="form">
-                    <p class="form__text">Pick favorites of season</p>
-                    <fieldset>
-                        <input type="radio" name="season" id="winter" value="winter"><label for="winter">Winter</label>
-                        <input type="radio" name="season" id="spring" value="spring"><label for="spring">Spring</label>
-                        <input type="radio" name="season" id="summer" value="summer"><label for="summer">Summer</label>
-                        <input type="radio" name="season" id="autumn" value="autumn"><label for="autumn">Autumn</label>
+                    <p class="favorites-form__text">Pick favorites of season</p>
+                    <fieldset class="favorites-form__radio">
+                        <label for="winter"><input type="radio" name="season" id="winter" value="winter" checked><span>Winter</span></label>
+                        <label for="spring"><input type="radio" name="season" id="spring" value="spring"><span>Spring</span></label>
+                        <label for="summer"><input type="radio" name="season" id="summer" value="summer"><span>Summer</span></label>
+                        <label for="autumn"><input type="radio" name="season" id="autumn" value="autumn"><span>Autumn</span></label>
                     </fieldset>
                 </form>
 
                 <ul class="favorites__list">
-                    <li class="favorites__item">
-                        <div class="favorites__mark">Staff Picks</div>
-                        <h3 class="title favorites__title">The Book Eaters <br>
-                            <span class="title-author">By Sunyi Dean</span>
-                        </h3>
-                        <p class="favorites__description">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
-                        <img src="#" alt="The Book Eaters">
+                    <li class="favorites__item favorites__item--winter">
+                        <div class="favorites__item-info">
+                            <div class="favorites__mark">Staff Picks</div>
+                            <h3 class="favorites__title">The Book Eaters <br>
+                                <span class="title-author">By Sunyi Dean</span>
+                            </h3>
+                            <p class="favorites__description">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+                            <div class="favorites__img">
+                                <picture> 
+                                    <img src="img/book1.jpg" srcset="img/book1@2x.jpg 2x" alt="The Book Eaters" width="200" height="300">
+                                </picture>  
+                            </div> 
+                        </div>  
                         <a href="#" class="button favorites__link">Buy</a>
                     </li>
-                    <li class="favorites__item">
-                        <div class="favorites__mark">Staff Picks</div>
-                        <h3 class="title favorites__title">Cackle<br>
-                            <span class="title-author">By Rachel Harrison</span>
-                        </h3>
-                        <p class="favorites__description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
-                        <img src="#" alt="Cackle">
+                    <li class="favorites__item favorites__item--winter">
+                        <div class="favorites__item-info">
+                            <div class="favorites__mark">Staff Picks</div>
+                            <h3 class="favorites__title">Cackle<br>
+                                <span class="title-author">By Rachel Harrison</span>
+                            </h3>
+                            <p class="favorites__description">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                            <div class="favorites__img">
+                                <picture> 
+                                    <img src="img/book2.jpg" srcset="img/book2@2x.jpg 2x"  alt="Cackle" width="200" height="300">
+                                </picture>  
+                            </div>
+                        </div>
                         <a href="#" class="button favorites__link">Buy</a>
                     </li>
-                    <li class="favorites__item">
-                        <div class="favorites__mark">Staff Picks</div>
-                        <h3 class="title favorites__title">Dante: Poet of the Secular World<br>
-                            <span class="title-author">By Erich Auerbach</span>
-                        </h3>
-                        <p class="favorites__description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
-                        <img src="#" alt="Dante: Poet of the Secular World">
+                    <li class="favorites__item favorites__item--winter">
+                        <div class="favorites__item-info">
+                            <div class="favorites__mark">Staff Picks</div>
+                            <h3 class="favorites__title">Dante: Poet of the Secular World<br>
+                                <span class="title-author">By Erich Auerbach</span>
+                            </h3>
+                            <p class="favorites__description">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                            <div class="favorites__img">
+                                <picture> 
+                                    <img src="img/book3.jpg" srcset="img/book3@2x.jpg 2x"  alt="Dante: Poet of the Secular World" width="200" height="300">
+                                </picture>  
+                            </div>  
+                        </div>
                         <a href="#" class="button favorites__link">Buy</a>
                     </li>
-                    <li class="favorites__item">
-                        <div class="favorites__mark">Staff Picks</div>
-                        <h3 class="title favorites__title">The Last Queen<br>
-                            <span class="title-author">By Clive Irving</span>
-                        </h3>
-                        <p class="favorites__description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
-                        <img src="#" alt="The Last Queen">
+                    <li class="favorites__item favorites__item--winter">
+                        <div class="favorites__item-info">
+                            <div class="favorites__mark">Staff Picks</div>
+                            <h3 class="favorites__title">The Last Queen<br>
+                                <span class="title-author">By Clive Irving</span>
+                            </h3>
+                            <p class="favorites__description">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                            <div class="favorites__img">
+                                <picture> 
+                                    <img src="img/book4.jpg" srcset="img/book4@2x.jpg 2x" alt="The Last Queen" width="200" height="300">
+                                </picture>  
+                            </div>  
+                        </div>
                         <a href="#" class="button favorites__link">Buy</a>
                     </li>
                 </ul>
