@@ -1,0 +1,42 @@
+.contact{
+    @include section-padding;
+
+    & .title{
+        text-align: center;
+    }
+}
+
+.contact__wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 50%));
+    gap: 10px;
+}
+
+.contact__info{
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contact__info-strong{
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact_info-text{
+    margin: 0;
+    margin-bottom: 20px;
+
+    & a{
+        color: $basic_black;
+    }
+}
+
+.mb40{
+    margin-bottom: 40px;
+}
+
+.contact__map{
+    height: auto;
+    background: url(../../img/map.jpg) no-repeat;
+}
