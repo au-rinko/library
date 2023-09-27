@@ -319,73 +319,78 @@
         </main>
 
         <footer class="footer">
-            <div class="footer__contacts">
-                <address>286 Cadman Plaza, New York, NY 11238, United States</address>
-                <div class="social-media">
-                    <a href="#" class="social-media__link">
-                        <span class="visually-hidden">Twitter</span>
-                    </a>
-                    <a href="#" class="social-media__link">
-                        <span class="visually-hidden">Instagram</span>
-                    </a>
-                    <a href="#" class="social-media__link">
-                        <span class="visually-hidden">Facebook</span>
-                    </a>
+            <div class="footer__wrapper">
+                <div class="footer__contacts">
+                    <address>286 Cadman Plaza, New York,<br> NY 11238, United States</address>
+                    <div class="social-media">
+                        <a href="#" class="social-media__link">
+                            <span class="visually-hidden">Twitter</span>
+                            <svg width="24" height="24" role="img" aria-hidden="true" aria-label="Twitter" >
+                                <use xlink:href="img/sprite.svg#twitter"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-media__link">
+                            <span class="visually-hidden">Instagram</span>
+                            <svg width="24" height="24" role="img" aria-hidden="true" aria-label="Instagram" >
+                                <use xlink:href="img/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-media__link">
+                            <span class="visually-hidden">Facebook</span>
+                            <svg width="24" height="24" role="img" aria-hidden="true" aria-label="Facebook" >
+                                <use xlink:href="img/sprite.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="timetable">
+                    <p class="timetable__text">Mon - Fri<br>
+                        08:00 am - 07:00 pm
+                    </p>
+                    <p class="timetable__text">Sat - Sun<br>
+                        10:00 am - 06:00 pm
+                    </p>
                 </div>
             </div>
-            <div class="timetable">
-                <p>Mon - Fri<br>
-                    08:00 am - 07:00 pm
-                </p>
-                <p>Sat - Sun<br>
-                    10:00 am - 06:00 pm
-                </p>
-            </div>
-            <div>
+            <div class="footer__copywrite">
                 <div>2023</div>
-                <a href="#">The Rolling Scopes School</a>
-                <div>Username</div>
+                <a href="https://rs.school/">The Rolling Scopes School</a>
+                <a href="https://au-rinko.github.io/">au_rinko</a>
             </div>
         </footer>
     </div>
 
-    <section class="popup login-popup">
+    <section class="popup login-popup invisible">
         <h2 class="title">Login</h2>
         <form action="#" method="post" class="popup-form">
-            <label for="reader-email">E-mail or readers card
-                <input type="text" name="reader-email" id="reader-email" class="popup-form__input">
-            </label>
-            <label for="reader-pass">Password
-                <input type="password" name="reader-pass" id="reader-pass" class="popup-form__input">
-            </label>
+            <label for="reader-email">E-mail or readers card</label>
+            <input type="text" name="reader-email" id="reader-email" class="popup-form__input">
+            <label for="reader-pass">Password</label>
+            <input type="password" name="reader-pass" id="reader-pass" class="popup-form__input">
             <button type="submit" class="button">Log In</button>
         </form>
         <div class="popup__text">Don’t have an account? <a href="#">Register</a></div>
-        <button type="button" class="close"></button>
+        <button type="button" class="close"><span class="visually-hidden">Close</span></button>
     </section>
 
-    <section class="popup register-popup">
+    <section class="popup register-popup invisible">
         <h2 class="title">Register</h2>
         <form action="#" method="post" class="popup-form">
-            <label for="name">First name
-                <input type="text" name="name" id="name" class="popup-form__input">
-            </label>
-            <label for="last-name">Last name
-                <input type="text" name="last-name" id="last-name" class="popup-form__input">
-            </label>
-            <label for="email">E-mail
-                <input type="email" name="email" id="email" class="popup-form__input">
-            </label>
-            <label for="password">Password
-                <input type="password" name="password" id="password" class="popup-form__input">
-            </label>
+            <label for="name">First name</label>
+            <input type="text" name="name" id="name" class="popup-form__input">
+            <label for="last-name">Last name</label>
+            <input type="text" name="last-name" id="last-name" class="popup-form__input">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="popup-form__input">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="popup-form__input">
             <button type="button" class="button">Sign Up</button>
         </form>
         <div class="popup__text">Already have an account? <a href="#">Login</a></div>
         <button type="button" class="close"></button>
     </section>
 
-    <section class="popup profile-popup">
+    <section class="popup profile-popup invisible">
         <div class="popup__wrapper">
             <div class="popup__left">
                 <img src="#" alt="Profile photo">

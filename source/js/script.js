@@ -34,3 +34,4 @@ sliderBtn[1].addEventListener("click", function(evt){
     sliderBtn[1].classList.add("about-slider__item--active");
     slide[2].classList.add("about-slider__button--active");
 });
+

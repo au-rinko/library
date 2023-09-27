@@ -93,6 +93,7 @@ a {
 
 .page-body {
   margin: 0;
+  position: relative;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 20px;
   font-style: normal;
@@ -662,4 +663,155 @@ a {
   margin-bottom: 35px;
   line-height: 40px;
   letter-spacing: 0.4px;
+}
+
+.footer {
+  padding: 20px 20px 40px;
+  padding-bottom: 44px;
+  background: #0C0C0E;
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.footer__wrapper {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__contacts address {
+  margin-bottom: 18px;
+  font-style: normal;
+}
+
+.social-media {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.social-media__link svg {
+  fill: #ffffff;
+  transition: all 0.5s ease-out;
+}
+.social-media__link:hover svg {
+  fill: #BB945F;
+}
+
+.timetable__text {
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: right;
+}
+.timetable__text:last-child {
+  margin-bottom: 0;
+}
+
+.footer__copywrite {
+  padding-top: 44px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Inter";
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.footer__copywrite a {
+  color: #ffffff;
+  transition: all 0.5s ease-out;
+}
+.footer__copywrite a:hover, .footer__copywrite a:focus {
+  color: #BB945F;
+}
+
+.popup {
+  padding: 20px 25px;
+  position: absolute;
+  top: 15vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+}
+.popup .title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Forum";
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.popup .title::after {
+  display: none;
+}
+.popup .button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  align-self: flex-start;
+  font-family: "Inter";
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 1px;
+}
+
+.popup-form {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.popup-form label {
+  font-family: "Inter";
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.popup-form__input {
+  outline: none;
+  border: 1px solid #BB945F;
+  font-size: 15px;
+  line-height: 20px;
+  transition: all 0.5s ease-out;
+}
+.popup-form__input:focus {
+  border: 1px solid #8E8E8E;
+}
+
+.popup__text {
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+  font-family: "Inter";
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: normal;
+}
+.popup__text a {
+  margin-left: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  color: #0C0C0E;
+  transition: all 0.5s ease-out;
+}
+.popup__text a:hover, .popup__text a:focus {
+  text-decoration: none;
+}
+
+.close {
+  outline: none;
+  border: none;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 19px;
+  height: 19px;
+  background: url(../../img/close.svg) top left/cover no-repeat;
+  cursor: pointer;
 }
