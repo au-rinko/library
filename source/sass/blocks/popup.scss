@@ -1,15 +1,16 @@
 .popup{
     padding: 20px 25px;
-    position: absolute;
+    position: fixed;
     top: 15vh;
     left: 50%;
     transform: translateX(-50%);
     background: $basic_white;
+    z-index: 5;
 
     & .title{
         margin-bottom: 20px;
         text-align: center;
-        font-family: "Forum";
+        font-family: $second_font;
         font-size: 20px;
         line-height: 20px; 
         letter-spacing: 0.4px;
@@ -92,4 +93,80 @@
     height: 19px;
     background: url(../../img/close.svg) top left/cover no-repeat;
     cursor: pointer;
+}
+
+.profile-popup{
+    padding: 0;
+
+    & .popup__wrapper{
+        display: grid;
+        grid-template-columns: 170px 430px;
+    }
+
+    .close{
+        top: 25px;
+        right: 25px;
+    }
+}
+
+.popup__left{
+    padding: 139px 25px;
+    text-align: center;
+    background: $basic_black1;
+}
+
+.profile__img{
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 30px 0;
+    width: 80px;
+    height: 80px;
+    background: $basic_white;
+    font-family: "Inter";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: $basic_brown;
+}
+
+.profile__name{
+    padding: 5px 15px;
+    letter-spacing: 0;
+    background: $basic_white;
+    color: $basic_black;
+}
+
+.profile__info{
+    padding: 30px 60px 40px 20px;
+
+    & .title{
+        margin-bottom: 40px;
+        text-align: left;
+        font-family: $second_font;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 20px; 
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+}
+
+.profile__icons{
+    @include no-list;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile__icons-title{
+    text-align: center;
+    font-family: $main_font;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
 }

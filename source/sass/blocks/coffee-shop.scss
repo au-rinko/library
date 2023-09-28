@@ -28,7 +28,7 @@
 .coffee-shop__title{
     margin: 0;
     margin-bottom: 40px;
-    font-family: "Forum";
+    font-family: $second_font;
     font-size: 40px;
     line-height: 40px; /* 100% */
     letter-spacing: 2px;
@@ -66,7 +66,7 @@
 }
 
 .coffee-shop__price{
-    font-family: "Forum";
+    font-family: $second_font;
 }
 
 .coffee-shop__menu--right{
