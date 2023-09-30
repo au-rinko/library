@@ -110,7 +110,7 @@
 }
 
 .popup__left{
-    padding: 139px 25px;
+    padding: 135px 25px;
     text-align: center;
     background: $basic_black1;
 }
@@ -138,7 +138,7 @@
 }
 
 .profile__info{
-    padding: 30px 60px 40px 20px;
+    padding: 30px 60px 35px 20px;
 
     & .title{
         margin-bottom: 40px;
@@ -161,6 +161,7 @@
 }
 
 .profile__icons-title{
+    margin-bottom: 10px;
     text-align: center;
     font-family: $main_font;
     font-size: 20px;
@@ -169,4 +170,177 @@
     line-height: 20px; /* 100% */
     letter-spacing: 0.4px;
     text-transform: capitalize;
+}
+
+.profile__icons-item{
+    margin-bottom: 20px;
+    text-align: center;
+
+    & svg{
+        margin-bottom: 10px;
+    }
+}
+
+.profile__icon-count{
+    font-family: $main_font;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 20px; /* 200% */
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+}
+
+.profile__books{
+    margin: 0;
+}
+
+.profile__books-title{
+    margin: 0;
+    margin-bottom: 30px;
+    font-family: $main_font;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $basic_black1;
+}
+
+.profile__books-list{
+    margin: 0;
+    margin-bottom: 40px;
+    padding-left: 20px;
+
+    & li{
+        margin-bottom: 10px;
+        font-family: $main_font;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+}
+
+.profile__card{
+    font-family: $main_font;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: normal;
+    color: $basic_black1;
+
+    & a{
+        position: relative;
+        margin-left: 10px;
+        color: $basic_brown;
+        transition: all 0.5s ease-out;
+
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 6px;
+            right: -25px;
+            width: 14px;
+            height: 12px;
+            background: url(../../img/link-icon.svg) no-repeat;
+        }
+
+        &:hover,
+        &:focus{
+            color: $basic_grey;
+        }
+    }
+}
+
+.card-popup{
+    padding: 0;
+    width: 650px;
+    top: 5vh;
+
+    & .title{
+        margin-bottom: 30px;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 40px;
+        line-height: 20px;
+        letter-spacing: 0.8px;
+        background: $basic_black1;
+        color: $basic_white;
+    }
+
+    & .close{
+        top: 20px;
+        right: 20px;
+        background: url("../../img/close_btn.svg") top left/cover no-repeat;
+    }
+}
+
+.card-popup__main{
+    padding: 0 40px 40px;
+    display: grid;
+    grid-template-columns: 190px 330px;
+    gap: 50px;
+}
+
+.card-popup__form{
+    width: 200px;
+
+    & fieldset{
+        margin-bottom: 10px;
+        padding: 0;
+        border: none;
+    }
+
+    & input{
+        outline: none;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    & label{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+    }
+}
+
+.card-popup__expiration-code{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .popup-form__input{
+        width: 45px;
+    }
+}
+
+.card-popup__buy{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 25px;
+
+    & .button{
+        margin-top: 0;
+        padding: 8px 26px;
+    }
+}
+
+.card-popup__price{
+    font-family: $main_font;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: $basic_black1;
+}
+
+.card-popup__info{
+    font-family: $main_font;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 2px;
+    color: $basic_grey;
 }

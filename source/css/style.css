@@ -80,6 +80,10 @@ a {
   background: #ffffff;
   transition: all 0.5s ease-out;
 }
+.button:hover {
+  background: rgba(187, 148, 95, 0.5);
+  border: 1px solid rgba(187, 148, 95, 0.5);
+}
 .button:focus {
   background: #BB945F;
   border: 1px solid #BB945F;
@@ -89,6 +93,7 @@ a {
   margin: 0 auto;
   min-width: 1440px;
   background-color: #ffffff;
+  scroll-behavior: smooth;
 }
 
 .page-body {
@@ -121,19 +126,22 @@ a {
 .header {
   width: 100%;
   min-height: 90px;
-  padding: 30px 20px;
+  padding: 20px;
   display: flex;
   align-items: center;
   background: #000000;
 }
 
 .header__logo {
+  margin: 0;
   margin-right: auto;
   align-self: flex-end;
   transition: all 0.5s ease-out;
-}
-.header__logo:hover, .header__logo:focus {
-  transform: scale(1.03);
+  color: #ffffff;
+  font-family: "Forum", "Times New Roman", serif;
+  font-size: 30px;
+  line-height: 50px; /* 166.667% */
+  letter-spacing: 0.6px;
 }
 
 .header__nav {
@@ -578,6 +586,10 @@ a {
   background: url(../../img/map.jpg) no-repeat;
 }
 
+.contact__info-name {
+  font-weight: 700;
+}
+
 .library-cards {
   padding: 20px 20px 40px;
 }
@@ -692,6 +704,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.footer__address {
+  color: #ffffff;
+  transition: all 0.5s ease-out;
+}
+.footer__address:hover, .footer__address:focus {
+  color: #BB945F;
 }
 
 .footer__contacts address {
@@ -840,7 +860,7 @@ a {
 }
 
 .popup__left {
-  padding: 139px 25px;
+  padding: 135px 25px;
   text-align: center;
   background: #0C0C0E;
 }
@@ -868,7 +888,7 @@ a {
 }
 
 .profile__info {
-  padding: 30px 60px 40px 20px;
+  padding: 30px 60px 35px 20px;
 }
 .profile__info .title {
   margin-bottom: 40px;
@@ -892,6 +912,7 @@ a {
 }
 
 .profile__icons-title {
+  margin-bottom: 10px;
   text-align: center;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 20px;
@@ -900,4 +921,164 @@ a {
   line-height: 20px; /* 100% */
   letter-spacing: 0.4px;
   text-transform: capitalize;
+}
+
+.profile__icons-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.profile__icons-item svg {
+  margin-bottom: 10px;
+}
+
+.profile__icon-count {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 20px; /* 200% */
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+}
+
+.profile__books {
+  margin: 0;
+}
+
+.profile__books-title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #0C0C0E;
+}
+
+.profile__books-list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+.profile__books-list li {
+  margin-bottom: 10px;
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.profile__card {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: normal;
+  color: #0C0C0E;
+}
+.profile__card a {
+  position: relative;
+  margin-left: 10px;
+  color: #BB945F;
+  transition: all 0.5s ease-out;
+}
+.profile__card a::after {
+  content: " ";
+  position: absolute;
+  top: 6px;
+  right: -25px;
+  width: 14px;
+  height: 12px;
+  background: url(../../img/link-icon.svg) no-repeat;
+}
+.profile__card a:hover, .profile__card a:focus {
+  color: #8E8E8E;
+}
+
+.card-popup {
+  padding: 0;
+  width: 650px;
+  top: 5vh;
+}
+.card-popup .title {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 40px;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  background: #0C0C0E;
+  color: #ffffff;
+}
+.card-popup .close {
+  top: 20px;
+  right: 20px;
+  background: url("../../img/close_btn.svg") top left/cover no-repeat;
+}
+
+.card-popup__main {
+  padding: 0 40px 40px;
+  display: grid;
+  grid-template-columns: 190px 330px;
+  gap: 50px;
+}
+
+.card-popup__form {
+  width: 200px;
+}
+.card-popup__form fieldset {
+  margin-bottom: 10px;
+  padding: 0;
+  border: none;
+}
+.card-popup__form input {
+  outline: none;
+  margin-bottom: 10px;
+  width: 200px;
+}
+.card-popup__form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+}
+
+.card-popup__expiration-code {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.card-popup__expiration-code .popup-form__input {
+  width: 45px;
+}
+
+.card-popup__buy {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 25px;
+}
+.card-popup__buy .button {
+  margin-top: 0;
+  padding: 8px 26px;
+}
+
+.card-popup__price {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #0C0C0E;
+}
+
+.card-popup__info {
+  font-family: "Inter", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  color: #8E8E8E;
 }

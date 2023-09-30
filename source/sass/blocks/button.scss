@@ -11,6 +11,11 @@
     background: $basic_white;
     transition: all 0.5s ease-out;
 
+    &:hover{
+        background: rgba($basic_brown, 0.5);
+        border: 1px solid rgba($basic_brown, 0.5);
+    }
+
     &:focus{
         background: $basic_brown;
         border: 1px solid $basic_brown;

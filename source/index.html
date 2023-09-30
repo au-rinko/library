@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklyn Public Library</title>
 
+    <link rel="icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
 
@@ -13,9 +14,7 @@
     <div class="page-bg invisible"></div>
     <div class="page-body__wrapper">
         <header class="header">
-            <a href="#" class="header__logo">
-                <img src="img/BrooklynPublicLibrary.svg" width="292" height="27" alt="Logo" class="header__logo-img">
-            </a>
+            <h1 class="header__logo">Brooklyn Public Library</h1>
 
             <nav class="header__nav">
                 <button type="button" class="button nav-toggle">
@@ -24,25 +23,25 @@
 
                 <ul class="header-menu">
                     <li class="header-menu__item">
-                        <a href="#" class="header-menu__link">About</a>
+                        <a href="#about" class="header-menu__link">About</a>
                     </li>
                     <li class="header-menu__item">
-                        <a href="#" class="header-menu__link">Favorites</a>
+                        <a href="#favorites" class="header-menu__link">Favorites</a>
                     </li>
                     <li class="header-menu__item">
-                        <a href="#" class="header-menu__link">Coffee shop</a>
+                        <a href="#coffee-shop" class="header-menu__link">Coffee shop</a>
                     </li>
                     <li class="header-menu__item">
-                        <a href="#" class="header-menu__link">Contacts</a>
+                        <a href="#contacts" class="header-menu__link">Contacts</a>
                     </li>
                     <li class="header-menu__item">
-                        <a href="#" class="header-menu__link">Library Card</a>
+                        <a href="#library-cards" class="header-menu__link">Library Card</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="header__profile">
-                <a href class="header__profile-toggle">
+                <a href="#" class="header__profile-toggle">
                     <svg width="28" height="28" role="img" aria-hidden="true" aria-label="Profile icon" >
                         <use xlink:href="img/sprite.svg#profile-icon"></use>
                     </svg>
@@ -71,13 +70,12 @@
         <main class="main">
             
             <section class="promo">
-                <h1 class="visually-hidden">Brooklyn Public Library</h1>
                 <p class="promo__text">
                     Welcome <br>to the Brooklyn <br>Library
                 </p>
             </section>
 
-            <section class="about">
+            <section class="about" id="about">
                 <h2 class="title">About</h2>
                 <p class="about__text">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 <div class="about-slider">
@@ -123,7 +121,7 @@
                 </div>
             </section>
 
-            <section class="favorites">
+            <section class="favorites" id="favorites">
                 <h2 class="title">Favorites</h2>
 
                 <form action="#" method="post" class="form">
@@ -200,7 +198,7 @@
                 </ul>
             </section>
 
-            <section class="coffee-shop">
+            <section class="coffee-shop" id="coffee-shop">
                 <h2 class="title">Coffee shop</h2>
                 <p class="coffee-shop__text">In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.</p>
 
@@ -278,7 +276,7 @@
                 </div>
             </section>
 
-            <section class="contact">
+            <section class="contact" id="contacts">
                 <h2 class="title">Our Contacts</h2>
 
                 <div class="contact__wrapper">
@@ -288,13 +286,13 @@
                         <p class="contact_info-text">For TTY service, please call <a href="tel:+6177302370">(617) 730-2370</a></p>
                         <p class="contact_info-text mb40">Putterham Library: <a href="tel:+6177302370">(617) 730-2370</a></p>
                         <div class="contact__info-strong">Senior Staff</div>
-                        <p class="contact_info-text">Library Director: <strong>Amanda Hirst</strong></p>
+                        <p class="contact_info-text">Library Director: <a href="mailto:amanda@google.com" class="contact__info-name">Amanda Hirst</a></p>
                     </div>
                     <div class="contact__map"></div>
                 </div>
             </section>
 
-            <section class="library-cards">
+            <section class="library-cards" id="library-cards">
                 <h2 class="title">Digital Library Cards</h2>
 
                 <div class="library-cards__wrapper">
@@ -322,7 +320,9 @@
         <footer class="footer">
             <div class="footer__wrapper">
                 <div class="footer__contacts">
-                    <address>286 Cadman Plaza, New York,<br> NY 11238, United States</address>
+                    <a href="#" class="footer__address">
+                        <address>286 Cadman Plaza, New York,<br> NY 11238, United States</address>
+                    </a>
                     <div class="social-media">
                         <a href="#" class="social-media__link">
                             <span class="visually-hidden">Twitter</span>
@@ -391,7 +391,7 @@
         <button type="button" class="close"></button>
     </section>
 
-    <section class="popup profile-popup">
+    <section class="popup profile-popup invisible">
         <div class="popup__wrapper">
             <div class="popup__left">
                 <div class="profile__img">
@@ -405,18 +405,24 @@
                 <ul class="profile__icons">
                     <li class="profile__icons-item">
                         <div class="profile__icons-title">visits</div>
-                        <img src="#" alt="">
-                        <div>23</div>
+                        <svg width="21" height="21" role="img" aria-hidden="true" aria-label="visits" >
+                            <use xlink:href="img/sprite.svg#visits"></use>
+                        </svg>
+                        <div class="profile__icon-count">23</div>
                     </li>
-                    <li>
+                    <li class="profile__icons-item">
                         <div class="profile__icons-title">bonuses</div>
-                        <img src="#" alt="">
-                        <div>1240</div>
+                        <svg width="20" height="21" role="img" aria-hidden="true" aria-label="bonuses" >
+                            <use xlink:href="img/sprite.svg#bonuses"></use>
+                        </svg>
+                        <div class="profile__icon-count">1240</div>
                     </li>
-                    <li>
+                    <li class="profile__icons-item">
                         <div class="profile__icons-title">Books</div>
-                        <img src="#" alt="">
-                        <div>2</div>
+                        <svg width="20" height="21" role="img" aria-hidden="true" aria-label="books" >
+                            <use xlink:href="img/sprite.svg#books"></use>
+                        </svg>
+                        <div class="profile__icon-count">2</div>
                     </li>
                 </ul>
                 <div class="profile__books">
@@ -427,6 +433,41 @@
                     </ul>
                 </div>
                 <div class="profile__card">Card number <a href="#">F00234030</a></div>
+            </div>
+        </div>
+        <button type="button" class="close"></button>
+    </section>
+
+    <section class="popup card-popup invisible">
+        <h2 class="card-popup__title title">Buy a library card</h2>
+        <div class="card-popup__main">
+            <form action="#" method="post" class="card-popup__form">
+                <fieldset class="card-popup__bank-card">
+                    <label for="bank-card-number">Bank card number</label>
+                    <input type="text" name="bank-card-number" id="bank-card-number" class="popup-form__input">
+                    <label for="month">Expiration code</label>
+                    <div class="card-popup__expiration-code">
+                        <input type="text" name="month" id="month" class="popup-form__input">
+                        <input type="text" name="year" id="year" class="popup-form__input">
+                    </div>
+                    <label for="cvc">Expiration code</label>
+                    <input type="text" name="cvc" id="cvc" class="popup-form__input">
+                </fieldset>
+                <fieldset class="card-popup__user-name">
+                    <label for="bank-card-name">Cardholder name</label>
+                    <input type="text" name="bank-card-name" id="bank-card-name" class="popup-form__input">
+                    <label for="postal-code">Postal code</label>
+                    <input type="text" name="postal-code" id="postal-code" class="popup-form__input">
+                    <label for="city">City / Town</label>
+                    <input type="text" name="city" id="city" class="popup-form__input">
+                </fieldset>
+                <div class="card-popup__buy">
+                    <button type="submit" class="button">Buy</button>
+                    <div class="card-popup__price">$ 25.00</div>
+                </div>
+            </form>
+            <div class="card-popup__info">
+                If you are live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
             </div>
         </div>
         <button type="button" class="close"></button>

@@ -17,6 +17,16 @@
     align-items: flex-start;
 }
 
+.footer__address{
+    color: $basic_white;
+    transition: all 0.5s ease-out;
+
+    &:hover,
+    &:focus{
+        color: $basic_brown;
+    }
+}
+
 .footer__contacts{
 
     & address{
