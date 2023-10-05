@@ -4,6 +4,16 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     gap: 30px;
+
+
+}
+
+.header__nav--closed .header-menu{
+    display: flex;
+
+    @media (min-width: $tablet_width){
+        display: none;
+    }
 }
 
 .header-menu__link{

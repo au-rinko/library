@@ -23,8 +23,49 @@
     position: relative;
     line-height: 30px;
 
-    .button{
+    @media (min-width: $tablet_width){
+        margin-left: 40px;
+        order: 3;
+    }
+
+    .nav-toggle{
         display: none;
+
+        @media (min-width: $tablet_width){
+            position: relative;
+            display: block;
+            border: none;
+            outline: none;
+            background: none;
+            padding: 0;
+            width: 45px;
+            height: 25px;
+            cursor: pointer;
+        }
+    }
+}
+
+.header__nav--closed .nav-toggle::before{
+    @media (min-width: $tablet_width){
+        content: ' ';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 2px;
+        background: $basic_white;
+        box-shadow: 0 11px $basic_white, 0 21px $basic_white;
+        transition: all 0.5s ease-out;
+        
+    }
+}
+
+.nav-toggle:hover::before,
+.nav-toggle:focus::before{
+    
+    @media (min-width: $tablet_width){
+        background: $basic_brown;
+        box-shadow: 0 11px $basic_brown, 0 21px $basic_brown;
     }
 }
 

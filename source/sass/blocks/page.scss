@@ -3,4 +3,8 @@
     min-width: 1440px;
     background-color: $basic_white;
     scroll-behavior: smooth;
+
+    @media (min-width: $tablet_width){
+        min-width: 768px;
+    }
 }

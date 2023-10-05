@@ -95,6 +95,11 @@ a {
   background-color: #ffffff;
   scroll-behavior: smooth;
 }
+@media (min-width: 768px) {
+  .page {
+    min-width: 768px;
+  }
+}
 
 .page-body {
   margin: 0;
@@ -111,6 +116,11 @@ a {
   margin: 0 auto;
   width: 1440px;
   position: relative;
+}
+@media (min-width: 768px) {
+  .page-body__wrapper {
+    width: 768px;
+  }
 }
 
 .page-bg {
@@ -148,8 +158,49 @@ a {
   position: relative;
   line-height: 30px;
 }
-.header__nav .button {
+@media (min-width: 768px) {
+  .header__nav {
+    margin-left: 40px;
+    order: 3;
+  }
+}
+.header__nav .nav-toggle {
   display: none;
+}
+@media (min-width: 768px) {
+  .header__nav .nav-toggle {
+    position: relative;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
+    width: 45px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__nav--closed .nav-toggle::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 2px;
+    background: #ffffff;
+    box-shadow: 0 11px #ffffff, 0 21px #ffffff;
+    transition: all 0.5s ease-out;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-toggle:hover::before,
+  .nav-toggle:focus::before {
+    background: #BB945F;
+    box-shadow: 0 11px #BB945F, 0 21px #BB945F;
+  }
 }
 
 .header__profile {
@@ -176,6 +227,15 @@ a {
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.header__nav--closed .header-menu {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .header__nav--closed .header-menu {
+    display: none;
+  }
 }
 
 .header-menu__link {
