@@ -140,6 +140,7 @@ a {
   display: flex;
   align-items: center;
   background: #000000;
+  position: relative;
 }
 
 .header__logo {
@@ -196,9 +197,45 @@ a {
 }
 
 @media (min-width: 768px) {
+  .header__nav--opened .nav-toggle::before {
+    content: " ";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    transform: rotate(-45deg);
+    transition: all 0.5s ease-out;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__nav--opened .nav-toggle::after {
+    content: " ";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-out;
+  }
+}
+
+@media (min-width: 768px) {
   .nav-toggle:hover::before,
-  .nav-toggle:focus::before {
+  .nav-toggle:focus::before,
+  .nav-toggle:focus::after,
+  .nav-toggle:hover::after {
     background: #BB945F;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__nav--closed .nav-toggle:hover::before,
+  .header__nav--closed .nav-toggle:focus::before {
     box-shadow: 0 11px #BB945F, 0 21px #BB945F;
   }
 }
@@ -228,6 +265,18 @@ a {
   flex-wrap: wrap;
   gap: 30px;
 }
+@media (min-width: 768px) {
+  .header-menu {
+    position: absolute;
+    top: 55px;
+    right: -20px;
+    width: 332px;
+    display: block;
+    text-align: center;
+    background: #000000;
+    padding-bottom: 80px;
+  }
+}
 
 .header__nav--closed .header-menu {
   display: flex;
@@ -235,12 +284,26 @@ a {
 @media (min-width: 768px) {
   .header__nav--closed .header-menu {
     display: none;
+    transition: all 0.5s ease-out;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-menu__item {
+    padding: 10px 0;
   }
 }
 
 .header-menu__link {
   color: #ffffff;
   transition: all 0.5s ease-out;
+}
+@media (min-width: 768px) {
+  .header-menu__link {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 50px;
+  }
 }
 .header-menu__link:hover {
   color: #BB945F;
@@ -307,6 +370,16 @@ a {
 @media (min-resolution: 2dppx) {
   .promo {
     background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 50%), url("../../img/Welcome@2x.jpg") top left/cover no-repeat, #000000;
+  }
+}
+@media (min-width: 768px) {
+  .promo {
+    background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url("../../img/Welcome_mobile.jpg") top left/cover no-repeat, #000000;
+  }
+}
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .promo {
+    background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.1) 100%), url("../../img/Welcome_mobile@2x.jpg") top left/cover no-repeat, #000000;
   }
 }
 

@@ -35,3 +35,18 @@ sliderBtn[1].addEventListener("click", function(evt){
     slide[2].classList.add("about-slider__button--active");
 });
 
+//кнопка меню
+
+const headerNav = document.querySelector(".header__nav");
+const headerButton = document.querySelector(".nav-toggle");
+
+headerButton.addEventListener("click", function(evt){
+    evt.preventDefault();
+    if(headerNav.classList.contains("header__nav--opened")){
+        headerNav.classList.remove("header__nav--opened");
+        headerNav.classList.add("header__nav--closed");
+    }else{
+        headerNav.classList.remove("header__nav--closed");
+        headerNav.classList.add("header__nav--opened");
+    }
+})

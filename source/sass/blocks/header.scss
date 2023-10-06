@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     background: $basic_black;
+    position: relative;
 }
 
 .header__logo{
@@ -60,11 +61,48 @@
     }
 }
 
+.header__nav--opened .nav-toggle::before{
+    @media (min-width: $tablet_width){
+        content: ' ';
+        position: absolute;
+        top: 8px;
+        right: 0;
+        width: 32px;
+        height: 2px;
+        background: $basic_white;
+        transform: rotate(-45deg);
+        transition: all 0.5s ease-out;
+    }
+}
+
+.header__nav--opened .nav-toggle::after{
+    @media (min-width: $tablet_width){
+        content: ' ';
+        position: absolute;
+        top: 8px;
+        right: 0;
+        width: 32px;
+        height: 2px;
+        background: $basic_white;
+        transform: rotate(45deg);
+        transition: all 0.5s ease-out;
+    }
+}
+
 .nav-toggle:hover::before,
-.nav-toggle:focus::before{
+.nav-toggle:focus::before,
+.nav-toggle:focus::after,
+.nav-toggle:hover::after{
     
     @media (min-width: $tablet_width){
         background: $basic_brown;
+    }
+}
+
+.header__nav--closed .nav-toggle:hover::before,
+.header__nav--closed .nav-toggle:focus::before{
+    
+    @media (min-width: $tablet_width){
         box-shadow: 0 11px $basic_brown, 0 21px $basic_brown;
     }
 }

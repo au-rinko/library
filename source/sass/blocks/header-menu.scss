@@ -5,6 +5,16 @@
     flex-wrap: wrap;
     gap: 30px;
 
+    @media (min-width: $tablet_width){
+        position: absolute;
+        top: 55px;
+        right: -20px;
+        width: 332px;
+        display: block;
+        text-align: center;
+        background: $basic_black;
+        padding-bottom: 80px;
+    }
 
 }
 
@@ -13,12 +23,25 @@
 
     @media (min-width: $tablet_width){
         display: none;
+        transition: all 0.5s ease-out;
+    }
+}
+
+.header-menu__item{
+    @media (min-width: $tablet_width) {
+        padding: 10px 0;
     }
 }
 
 .header-menu__link{
     color: $basic_white;
     transition: all 0.5s ease-out;
+
+    @media (min-width: $tablet_width) {        
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 50px;
+    }
 
     &:hover{
         color: $basic_brown;

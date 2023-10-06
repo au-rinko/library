@@ -7,6 +7,14 @@
     @media (min-resolution: 2dppx){
         background: linear-gradient(180deg, $basic_black1 0%, $basic_black1 0.01%, rgba(18, 18, 21, 0.10) 50%), url("../../img/Welcome@2x.jpg") top left/cover no-repeat, $basic_black;
     }
+
+    @media (min-width: $tablet_width){
+        background: linear-gradient(180deg, $basic_black1 0%, $basic_black1 0.01%, rgba(18, 18, 21, 0.10) 100%), url("../../img/Welcome_mobile.jpg") top left/cover no-repeat, $basic_black;
+
+        @media (min-resolution: 2dppx){
+            background: linear-gradient(180deg, $basic_black1 0%, $basic_black1 0.01%, rgba(18, 18, 21, 0.10) 100%), url("../../img/Welcome_mobile@2x.jpg") top left/cover no-repeat, $basic_black;
+        }
+    }
 }
 
 .promo__text{
