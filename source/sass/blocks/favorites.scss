@@ -12,6 +12,10 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
+
+    @media (max-width: $desktop_width){
+        margin-bottom: 40px;
+    }
 }
 
 .favorites-form__radio{
@@ -31,6 +35,10 @@
         &:checked{
             background: radial-gradient(circle, $basic_black 0%, $basic_black 40%, $basic_white 40%, $basic_white 100%);
 
+            & + span{
+                font-weight: 700;
+            }
+
             &:hover{
                 background: radial-gradient(circle, $basic_grey 0%, $basic_grey 40%, $basic_white 40%, $basic_white 100%);
             }
@@ -44,10 +52,24 @@
     & label{
         margin-right: 90px;
         transition: all 0.5s ease-out;
+        
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        @media (max-width: $desktop_width){
+            margin-right: 80px;
+        }
 
         & span{
             display: inline-block;
             margin-left: 20px;
+            letter-spacing: 0;
+
+            @media (max-width: $desktop_width){
+                margin-left: 15px;
+            }
         }
 
         &:hover{
@@ -61,6 +83,10 @@
     display: grid;
     grid-template: repeat(2, auto) / repeat(2, 550px);
     gap: 40px 260px;
+
+    @media (max-width: $desktop_width) {
+        display: block;
+    }
 }
 
 .favorites__item{
@@ -71,6 +97,15 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+
+    @media (max-width: $desktop_width) {
+        margin: 0 109px 40px 69px;
+        min-height: 555px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
 }
 
 .favorites__mark{

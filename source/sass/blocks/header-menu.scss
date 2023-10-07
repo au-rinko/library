@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     gap: 30px;
 
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         position: absolute;
         top: 55px;
         right: -20px;
@@ -14,21 +14,32 @@
         text-align: center;
         background: $basic_black;
         padding-bottom: 80px;
+        transition: all 0.5s ease-out;
     }
 
+}
+
+.header__nav--opened .header-menu{
+
+    @media (max-width: $desktop_width){
+        display: block;
+        animation: fadeIn 0.5s;
+    }
 }
 
 .header__nav--closed .header-menu{
-    display: flex;
+    // display: flex;
+    visibility: visible;
 
-    @media (min-width: $tablet_width){
-        display: none;
-        transition: all 0.5s ease-out;
-    }
+    @media (max-width: $desktop_width){
+        // display: block;
+        animation: fadeOut 0.5s;
+        visibility: hidden;
+    }  
 }
 
 .header-menu__item{
-    @media (min-width: $tablet_width) {
+    @media (max-width: $desktop_width) {
         padding: 10px 0;
     }
 }
@@ -37,7 +48,7 @@
     color: $basic_white;
     transition: all 0.5s ease-out;
 
-    @media (min-width: $tablet_width) {        
+    @media (max-width: $desktop_width) {        
         font-size: 20px;
         font-weight: 400;
         line-height: 50px;

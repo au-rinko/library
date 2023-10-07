@@ -10,6 +10,12 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 50%));
     gap: 10px;
+
+    @media (max-width: $desktop_width){
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 60px;
+    }
 }
 
 .contact__info{
@@ -39,6 +45,11 @@
 .contact__map{
     height: auto;
     background: url(../../img/map.jpg) no-repeat;
+
+    @media (max-width: $desktop_width) {
+        padding: 0 15px;
+        height: 414px;
+    }
 }
 
 .contact__info-name{

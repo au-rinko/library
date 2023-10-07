@@ -14,7 +14,7 @@
     width: 1440px;  
     position: relative;
 
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         width: 768px;
     }
 }

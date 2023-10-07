@@ -10,6 +10,12 @@
     display: grid;
     grid-template-columns: 600px 450px;
     justify-content: space-between;
+
+    @media (max-width: $desktop_width){
+        grid-template-columns: 600px;
+        justify-content: center;
+        gap: 20px;
+    }
 }
 
 .library-cards__check{
@@ -74,6 +80,10 @@
 .library-cards__get{
     text-align: right;
 
+    @media (max-width: $desktop_width){
+        text-align: center;
+    }
+
     & .button{
         margin-left: 15px;
         padding: 9px 20px;
@@ -91,6 +101,10 @@
     font-size: 30px;
     line-height: 33px;
     letter-spacing: 0.6px;
+
+    @media (max-width: $desktop_width){
+        margin-bottom: 40px;
+    }
 }
 
 .library-cards__text{
@@ -98,4 +112,8 @@
     margin-bottom: 35px;
     line-height: 40px;
     letter-spacing: 0.4px;
+
+    @media (max-width: $desktop_width){
+        margin-bottom: 40px;
+    }
 }

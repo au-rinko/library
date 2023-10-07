@@ -4,7 +4,7 @@
     background-color: $basic_white;
     scroll-behavior: smooth;
 
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         min-width: 768px;
     }
 }

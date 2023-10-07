@@ -19,6 +19,10 @@
 .coffee-shop__wrapper{
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $desktop_width) {
+        flex-wrap: wrap;
+    }
 }
 
 .coffee-shop__menu--left{
@@ -72,8 +76,18 @@
 .coffee-shop__menu--right{
     text-align: right;
 
+    @media (max-width: $desktop_width){
+        margin-left: auto;
+    }
+
     & .coffee-shop__item{
         justify-content: flex-end;
+
+        &:last-child{
+            @media (max-width: $desktop_width){
+                margin-bottom: 0;
+            }
+        }
 
         & .coffee-shop__name{
             margin-right: 0;

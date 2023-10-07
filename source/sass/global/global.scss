@@ -27,3 +27,14 @@
   .invisible{
     display: none;
   }
+
+  @keyframes fadeIn{
+    0% {width: 0px; height: 0px;}
+    100% {width: 332px; height: auto}
+  }
+
+  @keyframes fadeOut{
+    0% {width: 332px;}
+    50%{width: 50%; right: 0;}
+    100% {width: 0; visibility: hidden}
+  }

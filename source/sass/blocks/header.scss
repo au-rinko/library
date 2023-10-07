@@ -24,7 +24,7 @@
     position: relative;
     line-height: 30px;
 
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         margin-left: 40px;
         order: 3;
     }
@@ -32,7 +32,7 @@
     .nav-toggle{
         display: none;
 
-        @media (min-width: $tablet_width){
+        @media (max-width: $desktop_width){
             position: relative;
             display: block;
             border: none;
@@ -47,7 +47,7 @@
 }
 
 .header__nav--closed .nav-toggle::before{
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         content: ' ';
         position: absolute;
         top: 0;
@@ -62,7 +62,7 @@
 }
 
 .header__nav--opened .nav-toggle::before{
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         content: ' ';
         position: absolute;
         top: 8px;
@@ -76,7 +76,7 @@
 }
 
 .header__nav--opened .nav-toggle::after{
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         content: ' ';
         position: absolute;
         top: 8px;
@@ -94,7 +94,7 @@
 .nav-toggle:focus::after,
 .nav-toggle:hover::after{
     
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         background: $basic_brown;
     }
 }
@@ -102,7 +102,7 @@
 .header__nav--closed .nav-toggle:hover::before,
 .header__nav--closed .nav-toggle:focus::before{
     
-    @media (min-width: $tablet_width){
+    @media (max-width: $desktop_width){
         box-shadow: 0 11px $basic_brown, 0 21px $basic_brown;
     }
 }

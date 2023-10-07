@@ -38,7 +38,9 @@ sliderBtn[1].addEventListener("click", function(evt){
 //кнопка меню
 
 const headerNav = document.querySelector(".header__nav");
+const headerMenu = document.querySelector(".header-menu");
 const headerButton = document.querySelector(".nav-toggle");
+const headerMenuLink = document.querySelectorAll(".header-menu__item");
 
 headerButton.addEventListener("click", function(evt){
     evt.preventDefault();
@@ -50,3 +52,12 @@ headerButton.addEventListener("click", function(evt){
         headerNav.classList.add("header__nav--opened");
     }
 })
+
+headerMenuLink.forEach(function(item, key, arr){
+    arr[key].addEventListener("click", function(){
+        if(headerNav.classList.contains("header__nav--opened")){
+            headerNav.classList.remove("header__nav--opened");
+            headerNav.classList.add("header__nav--closed");
+        }
+    });
+});
