@@ -4,7 +4,24 @@
     background-color: $basic_white;
     scroll-behavior: smooth;
 
-    @media (max-width: $desktop_width){
-        min-width: 768px;
+    @media (max-width: $mobile_width){
+        min-width: $mobile_width;
     }
+
+    @media (min-width: 641px) and (max-width: $tablet_width1){
+        min-width: $mobile_width;
+    }
+
+    @media (min-width: $tablet_width) and (max-width: $old_desktop_width1){
+        min-width: $tablet_width;
+    }
+
+    @media (min-width: $old_desktop_width2) and (max-width: $desktop_width1){
+        min-width: $old_desktop_width2;
+    }
+
+    @media (min-width: $desktop_width2) and (max-width: $desktop_width){
+        min-width: $desktop_width2;
+    }
+
 }

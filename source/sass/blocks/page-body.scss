@@ -14,9 +14,26 @@
     width: 1440px;  
     position: relative;
 
-    @media (max-width: $desktop_width){
-        width: 768px;
+    @media (max-width: $mobile_width){
+        width: $mobile_width;
     }
+
+    @media (min-width: 641px) and (max-width: $tablet_width1){
+        width: $mobile_width;
+    }
+
+    @media (min-width: $tablet_width) and (max-width: $old_desktop_width1){
+        width: $tablet_width;
+    }
+
+    @media (min-width: $old_desktop_width2) and (max-width: $desktop_width1){
+        width: $old_desktop_width2;
+    }
+
+    @media (min-width: $desktop_width2) and (max-width: $desktop_width){
+        width: $desktop_width2;
+    }
+
 }
 
 .page-bg{

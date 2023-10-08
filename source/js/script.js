@@ -1,10 +1,50 @@
-// const profileToggle = document.querySelector(".header__profile-toggle"),
-//       profileList = document.querySelector(".profile__list");
+'use strict';
 
-// profileToggle.addEventListener("hover", function(evt){
-//     evt.preventDefault();
-//     profileList.classList.remove("profile__list--closed");
-// })
+//меню-бургер
+
+const headerNav = document.querySelector(".header__nav");
+const headerMenu = document.querySelector(".header-menu");
+const headerButton = document.querySelector(".nav-toggle");
+const headerMenuLink = document.querySelectorAll(".header-menu__item");
+
+const closeMenu = function(){
+    headerNav.classList.remove("header__nav--opened");
+    headerNav.classList.add("header__nav--closed");
+}
+
+const openMenu = function(){
+    headerNav.classList.remove("header__nav--closed");
+    headerNav.classList.add("header__nav--opened");
+}
+
+headerButton.addEventListener("click", function(evt){
+    evt.preventDefault();
+    if(headerNav.classList.contains("header__nav--opened")){
+        closeMenu();
+    }else{
+       openMenu(); 
+    }
+})
+
+headerMenuLink.forEach(function(item, key, arr){
+    arr[key].addEventListener("click", function(){
+        if(headerNav.classList.contains("header__nav--opened")){
+            closeMenu();
+        }
+    });
+});
+
+window.addEventListener('click', e => {
+    const target = e.target; // находим элемент, на котором был клик
+    if (!target.closest(".header-menu") && !target.closest(".nav-toggle")) { // если этот элемент или его родительские элементы не окно навигации и не кнопка
+        closeMenu();
+    }
+});
+
+
+
+
+// слайдер
 
 const slide = document.querySelectorAll(".about-slider__item"),
       sliderBtn = document.querySelectorAll(".about-slider__button");
@@ -33,31 +73,4 @@ sliderBtn[1].addEventListener("click", function(evt){
     };
     sliderBtn[1].classList.add("about-slider__item--active");
     slide[2].classList.add("about-slider__button--active");
-});
-
-//кнопка меню
-
-const headerNav = document.querySelector(".header__nav");
-const headerMenu = document.querySelector(".header-menu");
-const headerButton = document.querySelector(".nav-toggle");
-const headerMenuLink = document.querySelectorAll(".header-menu__item");
-
-headerButton.addEventListener("click", function(evt){
-    evt.preventDefault();
-    if(headerNav.classList.contains("header__nav--opened")){
-        headerNav.classList.remove("header__nav--opened");
-        headerNav.classList.add("header__nav--closed");
-    }else{
-        headerNav.classList.remove("header__nav--closed");
-        headerNav.classList.add("header__nav--opened");
-    }
-})
-
-headerMenuLink.forEach(function(item, key, arr){
-    arr[key].addEventListener("click", function(){
-        if(headerNav.classList.contains("header__nav--opened")){
-            headerNav.classList.remove("header__nav--opened");
-            headerNav.classList.add("header__nav--closed");
-        }
-    });
 });
