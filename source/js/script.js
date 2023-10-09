@@ -56,7 +56,7 @@ const makeInvisible = (className)=>{
 }
 
 radio.forEach(function(item, key, arr){
-    arr[key].addEventListener("RadioStateChange", function(){
+    arr[key].addEventListener("change", function(){
         if(arr[key].checked){
             switch (arr[key].value){
                 case 'winter': 
