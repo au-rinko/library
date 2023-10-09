@@ -42,6 +42,39 @@ window.addEventListener('click', e => {
 });
 
 
+//радио батоны
+
+const radio = document.querySelectorAll(".radio");
+const favouriteItems = document.querySelectorAll(".favorites__item");
+const makeInvisible = (className)=>{
+    favouriteItems.forEach(function(item, key, arr){
+        arr[key].classList.add("invisible");
+        if(arr[key].classList.contains(className)){
+            arr[key].classList.remove("invisible");
+        }
+    })
+}
+
+radio.forEach(function(item, key, arr){
+    arr[key].addEventListener("RadioStateChange", function(){
+        if(arr[key].checked){
+            switch (arr[key].value){
+                case 'winter': 
+                    makeInvisible('favorites__item--winter');
+                    break;
+                case 'spring':
+                    makeInvisible('favorites__item--spring');
+                    break;
+                case 'summer':
+                    makeInvisible('favorites__item--summer');
+                    break;
+                case 'autumn':
+                    makeInvisible('favorites__item--autumn');
+                    break;
+            }
+        }
+    });
+});
 
 
 // слайдер
@@ -74,3 +107,41 @@ sliderBtn[1].addEventListener("click", function(evt){
     sliderBtn[1].classList.add("about-slider__item--active");
     slide[2].classList.add("about-slider__button--active");
 });
+
+
+//модальные окна
+
+const userMenuLogin = document.querySelector('.profile__link--login');
+const userMenuRegister = document.querySelector('.profile__link--register');
+const popup = document.querySelectorAll('.popup');
+const popupLogin = document.querySelector('.login-popup');
+const popupRegister = document.querySelector('.register-popup');
+const bg = document.querySelector('.page-bg');
+const closeButton = document.querySelectorAll('.close');
+// const popupClose = (popupName)=>{
+    
+// }
+
+const closeModal = (popupName) =>{
+    popupName.classList.add('invisible');
+    bg.classList.add('invisible');
+};
+
+userMenuLogin.addEventListener("click", (evt)=>{
+    evt.preventDefault();
+    popupLogin.classList.remove('invisible');
+    bg.classList.remove('invisible');
+});
+
+userMenuRegister.addEventListener("click", (evt)=>{
+    evt.preventDefault();
+    popupRegister.classList.remove('invisible');
+    bg.classList.remove('invisible');
+});
+
+closeButton.forEach(function(item, key, arr){
+    arr[key].addEventListener("click", ()=>{
+        closeModal(popup[key]);
+    })
+});
+

@@ -24,10 +24,6 @@ a {
   text-decoration: none;
 }
 
-.invisible {
-  display: none;
-}
-
 @keyframes fadeIn {
   0% {
     width: 0px;
@@ -671,25 +667,24 @@ a {
 
 .favorites__item {
   position: relative;
-  padding: 15px 170px 15px 20px;
+  padding: 15px 0 15px 20px;
   border: 1px solid #000000;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  min-height: 555px;
 }
 @media (min-width: 1024px) and (max-width: 1279px) {
   .favorites__item {
     margin: 0 auto 40px;
     width: 550px;
-    min-height: 555px;
   }
 }
 @media (max-width: 1023px) {
   .favorites__item {
     margin: 0 109px 40px 69px;
     width: 550px;
-    min-height: 555px;
   }
   .favorites__item:last-child {
     margin-bottom: 0;
@@ -699,7 +694,6 @@ a {
   .favorites__item {
     margin: 0 auto 40px;
     width: 470px;
-    min-height: 555px;
   }
 }
 
@@ -740,6 +734,7 @@ a {
 .favorites__description {
   margin: 0;
   margin-bottom: 15px;
+  padding-right: 170px;
   font-family: "Inter";
   font-size: 15px;
   font-weight: 400;
@@ -1444,4 +1439,8 @@ a {
   line-height: 20px;
   letter-spacing: 2px;
   color: #8E8E8E;
+}
+
+.invisible {
+  display: none;
 }
