@@ -7,3 +7,9 @@
 @mixin section-padding{
     padding: 20px 20px 40px;
 }
+
+@mixin button-no{
+    border: none;
+    outline: none;
+    background: none;
+}

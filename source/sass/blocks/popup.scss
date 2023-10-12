@@ -348,3 +348,14 @@
 .invisible{
     display: none;
   }
+
+  @keyframes f_error{
+    0%, 100% {transform: translateX(0);}
+    15%, 45%, 75% {transform: translateX(-55%);}
+    30%, 60%, 90% {transform: translateX(-45%);}
+}
+
+.form-error{
+    animation-name: f_error;
+    animation-duration: 0.8s;
+}

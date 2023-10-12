@@ -46,6 +46,7 @@
 
 .coffee-shop__item{
     margin-bottom: 40px;
+    max-width: 500px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -61,6 +62,8 @@
     font-family: "Inter";
     font-weight: 400;
     margin-right: auto;
+    flex-basis: 220px;
+    flex-shrink: 1;
 }
 
 .coffee-shop__line{

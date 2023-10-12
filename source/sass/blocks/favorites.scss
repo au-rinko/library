@@ -177,12 +177,20 @@
 
 .favorites__img{
     position: absolute;
-    bottom: -6px;
+    bottom: -1px;
     left: 390px;
     width: 200px;
+    height: 300px;
 
     @media (max-width: $tablet_width1){
         left: 300px;
+    }
+
+    & img,
+    & picture{
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
     }
 }
 
